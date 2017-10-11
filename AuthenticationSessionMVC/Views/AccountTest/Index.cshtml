@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@model AuthenticationSessionMVC.ViewModel.AccountViewModel
+
+<h2>Index</h2>
+@ViewBag.Error
+<body>
+    @using (Html.BeginForm("Login", "AccountTest",FormMethod.Post))
+    {
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td> @Html.LabelFor(model => model.AccountTest.UserName)</td>
+                <td> @Html.TextBoxFor(model => model.AccountTest.UserName)</td>
+            </tr>
+            <tr>
+                <td> @Html.LabelFor(model => model.AccountTest.Password)</td>
+                <td> @Html.PasswordFor(model => model.AccountTest.Password)</td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="name" value="Login " />></td>
+            </tr>
+        </table>
+    }
+</body>

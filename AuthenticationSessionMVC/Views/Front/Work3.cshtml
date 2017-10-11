@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Work3";
+}
+@using AuthenticationSessionMVC.Security
+<h2>Work3</h2>
+
+<body>
+    welcome @SessionPersistor.UserName
+    </br>
+    <a href="@Url.Action("Logout","AccountTest")">Logout</a>
+</body>
